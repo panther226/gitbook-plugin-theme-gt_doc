@@ -1,0 +1,15 @@
+{
+  "name": "gitbook-plugin-theme-gt_doc",
+  "version": "1.0.2",
+  "description": "gitbook theme of GateChain Docs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gitbook",
+    "theme"
+  ],
+  "author": "Panther",
+  "license": "ISC"
+}

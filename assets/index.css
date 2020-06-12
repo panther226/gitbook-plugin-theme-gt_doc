@@ -1,0 +1,305 @@
+body {
+    font-family: PingFangSC,'helvetica neue','hiragino sans gb',arial,'microsoft yahei ui','microsoft yahei',simsun,sans-serif !important;
+    letter-spacing: .2px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+}
+.book-header h1{
+    opacity: 1;
+    color: #242A31;
+    font-weight: 600;
+}
+.book .book-summary .exc-trigger{
+    left: auto;
+    right: 12px;
+    right: 10px;
+    width: 30px;
+    text-align: center;
+}
+.markdown-section {
+    padding-bottom: 20px;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+    margin-bottom: .5em;
+    font-weight: 400;
+}
+
+.markdown-section p {
+    line-height: 2;
+}
+
+.markdown-section img {
+    padding: 8px;
+    background: #e4e4e478;
+    transition: all 1s;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px #dcdcdc;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 95%;
+}
+
+.markdown-section img:hover {
+    box-shadow: 0 0 10px #bbb
+}
+
+.markdown-section code {
+    background-color: #f5ce76;
+    border-radius: 4px;
+}
+
+.exc-trigger {
+    color: #333333;
+}
+
+.navigation {
+    display: none;
+}
+
+/*Book inner page*/
+
+.book-summary-title {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    font-size: 18px;
+    color: #403e3e;
+}
+
+.book-summary,
+.book-body {
+    top: 50px;
+}
+.book-summary{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.book-summary .articles{
+    border-left: 2px dashed #00a0e9;
+    margin-left: 30px;
+}
+.book-summary ul.summary li ul,.book .book-summary .articles li a{
+    padding-left: 0;
+}
+
+.book-summary ul.summary li.active {
+    border-right: 3px solid #00a0e9;
+    background: #f3f1f1;
+}
+
+.book-summary ul.summary li.active > a {
+    color: #00a0e9;
+    text-decoration: none;
+}
+
+.book-summary ul.summary li a:hover {
+    text-decoration: none;
+}
+
+.page-inner {
+    max-width: none;
+    padding: 20px 270px 40px 40px;
+}
+
+.header-inner {
+    width: 100%;
+    padding: 10px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: #00a0e9;
+    margin: 0 auto;
+    height: 50px;
+}
+
+.header-inner:before,
+.header-inner:after {
+    content: " ";
+    display: table;
+    line-height: 0;
+}
+
+.header-inner:after {
+    clear: both;
+}
+
+.header-inner #book-search-input {
+    float: right;
+    padding: 0;
+    border: none;
+    user-select: none;
+    background: none;
+    display: none;
+}
+
+.header-inner #book-search-input input[type="text"] {
+    width: 160px;
+    background: #00a0e9;
+    border-radius: 15px;
+    line-height: 22px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-right: 10px;
+    padding: 3px 10px;
+}
+
+.header-inner .search-icon {
+    float: right;
+    height: 30px;
+    width: 22px;
+    cursor: pointer;
+    color: #fff;
+    line-height: 34px;
+}
+.header-inner .search-icon i{
+    font-size: 22px;
+}
+
+.header-inner .logo {
+    float: left;
+    height: 30px;
+}
+
+.header-inner .logo img {
+    display: block;
+    height: inherit;
+    padding: 5px 0;
+}
+
+.header-inner .title {
+    float: left;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+/* 导航 */
+.header-inner .header-nav {
+    list-style: none;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 0 20px 0 0;
+    margin: 0;
+    float: right;
+    display: table;
+}
+
+.header-inner .header-nav li {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 50px;
+    margin-right: 20px;
+    padding: 3px 15px;
+}
+
+.header-inner .header-nav li a {
+    color: #ffffff;
+}
+
+/*Book inner page end*/
+
+/* Book  anchor*/
+.book-anchor {
+    width: 180px;
+    position: absolute;
+    top: 120px;
+    right: 30px;
+    padding: 10px 0px 10px 0px;
+    z-index: 999;
+    user-select: none;
+    border-left: 1px solid #ececec;
+}
+
+
+
+.book-anchor a {
+    display: block;
+    line-height: 25px;
+    color: #656565;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.book-anchor a:hover {
+    color: #00a0e9;
+    text-decoration: none;
+}
+
+.book-anchor .selected {
+    color: #00a0e9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.book-anchor .anchor-h1 {
+    padding-left: 10px;
+}
+
+.book-anchor .anchor-h2 {
+    padding-left: 20px;
+}
+
+.book-anchor .anchor-h3 {
+    padding-left: 30px;
+}
+
+.page-link-nav-box a,.page-link-nav-box a:hover{
+    text-decoration: none;
+    color: #00a0e9;
+}
+
+.page-link-nav-box .page-link-nav{
+    display: inline-block;
+    width: 45%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    color: #242A31;
+    border: 1px solid #E6ECF1;
+    box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.5rem;
+}
+.page-link-nav-box .page-link-nav i{
+    padding: 0 10px;
+}
+.page-link-nav-box .previous-page-link{
+    float: left;
+}
+.next-page-link{
+    float: right;
+    text-align: right;
+}
+@media screen and (max-width: 768px) {
+    .book-anchor{
+        display: none;
+    }
+    .page-inner{
+        padding: 20px;
+    }
+    .header-inner .header-nav{
+        display: none;
+    }
+    .hide-4-mb{
+        display: none;
+    }
+    .page-link-nav-box .page-link-nav{
+        width: 100%;
+    }
+}

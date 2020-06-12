@@ -1,0 +1,76 @@
+{% extends template.self %}
+{% block body %}
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		{% if book.gt_doc.logo %}
+		<img src="{{book.gt_doc.logo}}" class="logo">
+		{% endif %}
+		<span id="page_title" class="title"></span>
+		<!-- Search -->
+		<div id="searchIcon" class="search-icon">
+			<i class="fa fa-search"></i>
+		</div>
+		{% block search_input %}{% endblock %}
+		<!-- Nav -->
+		{% if book.gt_doc.nav %}
+		<ul class="header-nav">
+			{% for nav in book.gt_doc.nav -%}
+			<li class="{{nav.className}} {{nav.className2}}">
+				<a href="{{nav.href}}" target="{{ nav.target}}">{{ nav.text }}</a>
+			</li>
+			{%- endfor %}
+		</ul>
+		{% endif %}
+	</div>
+
+	<div class="book-summary">
+		{% if book.gt_doc.summary_title %}
+		<div class="book-summary-title">{{book.gt_doc.summary_title}}</div>
+		{% endif %}
+	
+		{% block book_sidebar %}
+		{% block book_summary %}
+		<nav role="navigation">
+			{% include "website/summary.html" %}
+		</nav>
+		{% endblock %}
+		{% endblock %}
+	</div>
+
+	<!-- Content nav -->
+	<div class="book-anchor">
+		{% if book.gt_doc.anchor_title %}
+		<div class="book-anchor-title">{{book.gt_doc.anchor_title}}</div>
+		{% endif %}
+		<div class="book-anchor-body"></div>
+	</div>
+
+	<div class="book-body">
+		{% block book_body %}
+		<div class="body-inner">
+			{% block book_inner %}
+			{% include "website/header.html" %}
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					{% block search_results %}
+					<section class="normal markdown-section">
+						{% block page %}
+						{{ page.content|safe }}
+						{% endblock %}
+					</section>
+					{% endblock %}
+				</div>
+			</div>
+			{% endblock %}
+		</div>
+		{% endblock %}
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({{ template.getJSContext()|dump|safe }});
+		});
+	</script>
+</div>
+{% endblock %}
